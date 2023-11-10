@@ -7,7 +7,7 @@ class BudgetTracker {
         gsignDisplay: 'always',
         minimumFractionDigits: 2,
       });
-  
+      ///memory card
       this.list = document.getElementById("transactionList");
       this.form = document.getElementById("transactionForm");
       this.status = document.getElementById("status");
