@@ -13,7 +13,7 @@ $gradient-direction: 120deg;
    padding: 2rem;
    font-family: 'Acme', sans-serif;
    background-image: linear-gradient( $gradient-direction, $blue, $grey);
-   background-image: no-repeat;
+   background-repeat: cover;
    color: $primary-color;
  }
  
