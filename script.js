@@ -23,9 +23,10 @@ class BudgetTracker {
   
     updateTotal() {
       const incomeTotal = this.transactions
-        .filter(trx => trx.type === 'income')
-        .reduce((total, trx) => total + trx.amount, 0);
-  
+        .filter(trx => trx.type === 'income')///'filter' method is used to create a new array that only 
+        //contains elemets where the 'type' property 
+        .reduce((total, trx) => total + trx.amount, 0); 
+
       const expenseTotal = this.transactions
         .filter(trx => trx.type === 'expense')
         .reduce((total, trx) => total + trx.amount, 0);
@@ -37,6 +38,7 @@ class BudgetTracker {
       this.income.textContent = this.formatter.format(incomeTotal);
     }
   
+    
     renderList() {
       this.list.innerHTML = "";
   
@@ -88,7 +90,7 @@ class BudgetTracker {
   
       const formData = new FormData(this.form);
      
-      this.transactions.push({ ///pushes everything from the input to the 
+      this.transactions.push({ ///pushes everything from the input to the new transaction
         id: this.transactions.length + 1,
         name: formData.get("name"),
         amount: parseFloat(formData.get("amount")),
